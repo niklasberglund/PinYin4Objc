@@ -10,32 +10,34 @@ PinYin4Objc is a popular Objective-C library supporting conversion between Chine
   
 ## Usage
 1. Use async method with block, this can avoid ui blocking, and runs smoothly:
- 
-		NSString *sourceText=@"我爱中文";
-    	HanyuPinyinOutputFormat *outputFormat=[[HanyuPinyinOutputFormat alloc] init];
-    	[outputFormat setToneType:ToneTypeWithoutTone];
-    	[outputFormat setVCharType:VCharTypeWithV];
-    	[outputFormat setCaseType:CaseTypeLowercase];    
-  		[PinyinHelper toHanyuPinyinStringWithNSString:sourceText 
-  						   withHanyuPinyinOutputFormat:outputFormat 
-  										   withNSString:@" " 
-  										   outputBlock:^(NSString *pinYin) {
-      		_outputTv.text=pinYin; //update ui
 
- 		 }];
+```objc
+NSString *sourceText=@"我爱中文";
+HanyuPinyinOutputFormat *outputFormat=[[HanyuPinyinOutputFormat alloc] init];
+[outputFormat setToneType:ToneTypeWithoutTone];
+[outputFormat setVCharType:VCharTypeWithV];
+[outputFormat setCaseType:CaseTypeLowercase];    
+[PinyinHelper toHanyuPinyinStringWithNSString:sourceText 
+				   withHanyuPinyinOutputFormat:outputFormat 
+								   withNSString:@" " 
+								   outputBlock:^(NSString *pinYin) {
+	_outputTv.text=pinYin; //update ui
 
+ }];
+```
 
 2. Use sync  method below:
- 
-		NSString *sourceText=@"我爱中文";
-    	HanyuPinyinOutputFormat *outputFormat=[[HanyuPinyinOutputFormat alloc] init];
-    	[outputFormat setToneType:ToneTypeWithoutTone];
-    	[outputFormat setVCharType:VCharTypeWithV];
-    	[outputFormat setCaseType:CaseTypeLowercase];
-    	NSString *outputPinyin=[PinyinHelper toHanyuPinyinStringWithNSString:sourceText withHanyuPinyinOutputFormat:outputFormat withNSString:@" "];
-    	
-    	
-    	
+
+```objc
+NSString *sourceText=@"我爱中文";
+HanyuPinyinOutputFormat *outputFormat=[[HanyuPinyinOutputFormat alloc] init];
+[outputFormat setToneType:ToneTypeWithoutTone];
+[outputFormat setVCharType:VCharTypeWithV];
+[outputFormat setCaseType:CaseTypeLowercase];
+NSString *outputPinyin=[PinyinHelper toHanyuPinyinStringWithNSString:sourceText withHanyuPinyinOutputFormat:outputFormat withNSString:@" "];
+``` 	
+
+
 ## ScreenShot
 
    ![ScreenShot](ScreenShot.PNG)
