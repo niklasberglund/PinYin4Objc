@@ -1,7 +1,7 @@
 PinYin4Objc
 ===========
 
-PinYin4Objc is a popular objective-c library supporting convertion between Chinese(both Simplified and Tranditional) characters and most popular Pinyin systems， it's performance is very efficient, data cached at first time, you can use async method with block, this can avoid ui blocking, and runs smoothly. The output format of pinyin could be customized. 
+PinYin4Objc is a popular Objective-C library supporting conversion between Chinese(both Simplified and Traditional) characters and most popular Pinyin systems，it's performance is very efficient, data cached at first time, you can use async method with block, this can avoid UI blocking, and runs smoothly. The output format of pinyin can be customized. 
 
 *update 
 
